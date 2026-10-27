@@ -1,7 +1,7 @@
 package com.onaar.baza_room;
 
-import androidx.room3.Entity;
-import androidx.room3.PrimaryKey;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "gry")
 public class Gra {
@@ -13,11 +13,14 @@ public class Gra {
     public int kategoriaWiekowa;
     public String kategoria;
 
-    public Gra(String kategoria, int kategoriaWiekowa, int maksLiczbaOsob, int minLiczbaOsob, String nazwa) {
-        this.kategoria = kategoria;
-        this.kategoriaWiekowa = kategoriaWiekowa;
-        this.maksLiczbaOsob = maksLiczbaOsob;
-        this.minLiczbaOsob = minLiczbaOsob;
+    public Gra(String nazwa, int minLiczbaOsob, int maksLiczbaOsob, int kategoriaWiekowa, String kategoria) {
         this.nazwa = nazwa;
+        this.minLiczbaOsob = minLiczbaOsob;
+        this.maksLiczbaOsob = maksLiczbaOsob;
+        this.kategoriaWiekowa = kategoriaWiekowa;
+        this.kategoria = kategoria;
+    }
+
+    public Gra() {
     }
 }
